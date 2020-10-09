@@ -58,7 +58,7 @@ class NoiseManager {
         var radialMap = this.getRadialMap(size);
 
         for(var i = 0; i < heightMap.length; i++) {
-            heightMap[i] = heightMap[i] * radialMap[i];
+            heightMap[i] = heightMap[i] + (radialMap[i] / 2);
         }
 
         return heightMap;
